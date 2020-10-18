@@ -1,0 +1,13 @@
+{
+  "name": "digishop",
+  "type": "project",
+  "require": {
+    "php": ">=5.5",
+    "kavenegar/php": "*",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "morilog/jalali" : "3.*"
+  }
+
+}
