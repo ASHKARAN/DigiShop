@@ -9,6 +9,7 @@ class Config {
     public static $servername = "localhost";
     public static $DEBUG_MODE = true;
     public static $APP_NAME   = 'DigiShop';
+    public static $API_KEY_KAVENEGAR   = '';
 
 
 
