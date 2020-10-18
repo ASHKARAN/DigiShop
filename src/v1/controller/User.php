@@ -4,6 +4,7 @@ namespace DigiShop\Controller;
 use DigiShop\app;
 use DigiShop\Model\SMSModel;
 use DigiShop\Model\UserModel;
+use DigiShop\Utils\JWTUtils;
 
 class User
 {
@@ -47,8 +48,11 @@ class User
         }
 
         $this->userModel->resetOtpCode($json->phoneNumber);
-        echo 'let s login';
-        //TODO login
+
+        $user = $this->userModel->getUserByPhoneNumber($json->phoneNumber);
+        $user['session'] = JWTUtils::encode(["userID" => $user['userID'], "phoneNumber" => $user['phoneNumber'] ]);
+
+        app::out($user , HTTP_OK);
 
 
 

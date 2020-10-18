@@ -10,7 +10,7 @@ class Config {
     public static $DEBUG_MODE = true;
     public static $APP_NAME   = 'DigiShop';
     public static $API_KEY_KAVENEGAR   = '';
-    public static $API_KEY_JWT   = '123456';
+    public static $API_KEY_JWT   = 'fsgblkds;fhg;lgh;kadrhg;aekrugh;aekrgh;keargh;keaurgh;kearhg';
 
 
 
