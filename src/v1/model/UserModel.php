@@ -28,4 +28,17 @@ class UserModel
             [$otpCode, $phoneNumber  ]
         );
     }
+    public function checkOtpCode($phoneNumber , $otpCode) {
+        return MyPDO::doSelect(
+            "SELECT otpCode FROM `user` WHERE  otpCode =  ? AND otpCode > 0   AND  phoneNumber = ? ",
+            [$otpCode, $phoneNumber  ],
+            false
+        );
+    }
+    public function resetOtpCode($phoneNumber ) {
+          MyPDO::doQuery(
+            "UPDATE `user` SET otpCode =  0  WHERE phoneNumber = ? ",
+            [$phoneNumber  ]
+        );
+    }
 }
